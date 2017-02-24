@@ -29,9 +29,9 @@ module TestQueue
           item = Marshal.load(data)
           break if item.nil? || item.empty?
           suite = @suites[item]
-          puts "Iterator suite:[#{item}]=>[#{suite}], suites.size:#{suites.size}, nil?:#{suite.nil?.to_s}"
+          puts "Iterator suite:[#{item}]=>[#{suite}], suites.size:#{@suites.size}, nil?:#{suite.nil?.to_s}"
           if suite.nil?
-            puts "!!!skip suite:[#{item}]=>[#{suite}], suites.size:#{suites.size}, nil?:#{suite.nil?.to_s}"
+            puts "!!!skip suite:[#{item}]=>[#{suite}], suites.size:#{@suites.size}, nil?:#{suite.nil?.to_s}"
             next
           end
 
